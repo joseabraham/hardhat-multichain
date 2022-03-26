@@ -1,21 +1,6 @@
 import { HardhatUserConfig } from "hardhat/config";
 
-const {
-    BSC_URL,
-    BSC_DEPLOY_KEY,
-    BSCSCAN_API_KEY,
-    ETHERSCAN_API_KEY,
-    BSC_TESTNET_URL,
-    BSC_TESTNET_DEPLOY_KEY,
-    ARBITRUM_TESTNET_DEPLOY_KEY,
-    ARBITRUM_TESTNET_URL,
-    ARBITRUM_DEPLOY_KEY,
-    POLYGON_URL,
-    MAINNET_URL,
-    MAINNET_DEPLOY_KEY,    
-  } = require("./env.json")
-
-
+  require('dotenv').config();
 
 const hardhatConfig: HardhatUserConfig = {
     networks: {
@@ -27,7 +12,7 @@ const hardhatConfig: HardhatUserConfig = {
             },
             allowUnlimitedContractSize: true,      
             forking: {
-                url: POLYGON_URL,
+                url: process.env.POLYGON_URL,
                 // blockNumber: 2776603,
                 // enabled: true,
             }, 
