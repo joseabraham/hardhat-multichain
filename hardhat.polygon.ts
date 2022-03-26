@@ -1,6 +1,7 @@
 import { HardhatUserConfig } from "hardhat/config";
 
-  require('dotenv').config();
+//@ts-ignore
+require('dotenv').config();
 
 const hardhatConfig: HardhatUserConfig = {
     networks: {
