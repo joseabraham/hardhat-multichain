@@ -2,6 +2,7 @@ import { HardhatUserConfig } from "hardhat/config";
 
 //@ts-ignore
 require('dotenv').config();
+let polygonURL = process.env.POLYGON_URL || "";
 
 const hardhatConfig: HardhatUserConfig = {
     networks: {
@@ -11,11 +12,9 @@ const hardhatConfig: HardhatUserConfig = {
                 auto: false,
                 interval: 500,
             },               
-            forking: {
-                //@ts-ignore
-                url: process.env.POLYGON_URL,
-                // blockNumber: 2776603,                
-            }, 
+            forking: {                
+                url: polygonURL,                                
+            }
         },
     },
 };
