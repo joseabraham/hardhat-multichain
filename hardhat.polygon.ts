@@ -13,6 +13,7 @@ const hardhatConfig: HardhatUserConfig = {
             },
             allowUnlimitedContractSize: true,      
             forking: {
+                //@ts-ignore
                 url: process.env.POLYGON_URL,
                 // blockNumber: 2776603,
                 // enabled: true,
