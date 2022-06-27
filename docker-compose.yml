@@ -10,6 +10,8 @@ services:
     - "8545:8545"
   polygon:
     build: .
+    env_file:
+      - .env
     container_name: polygon
     volumes:
       - ./hardhat.polygon.ts:/usr/src/app/hardhat.config.ts
@@ -22,3 +24,12 @@ services:
       - ./hardhat.xdai.ts:/usr/src/app/hardhat.config.ts
     ports:
       - "8547:8545"
+  fantom:
+    build: .
+    env_file:
+      - .env
+    container_name: fantom
+    volumes:
+      - ./hardhat.fantom.ts:/usr/src/app/hardhat.config.ts
+    ports:
+      - "8548:8545"
