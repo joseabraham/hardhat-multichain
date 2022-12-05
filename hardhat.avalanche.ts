@@ -2,19 +2,19 @@ import { HardhatUserConfig } from "hardhat/config";
 
 //@ts-ignore
 require('dotenv').config();
-let fantomURL = process.env.FANTOM_URL || "";
-console.log("fantomURL", fantomURL)
+let avalancheURL = process.env.AVAX_URL || "";
+console.log("avalancheURL", avalancheURL)
 
 const hardhatConfig: HardhatUserConfig = {
     networks: {
         hardhat: {            
-            chainId: 250,
+            chainId: 43114,
             mining: {
                 auto: false,
-                interval: 500,
+                interval: 200,
             },               
             forking: {                
-                url: fantomURL,                                
+                url: avalancheURL,                                
             },
             accounts:{
                 "mnemonic": "test test test test test test test test test test test junk",

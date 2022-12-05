@@ -19,6 +19,11 @@ docker-compose up -d
 
 Polygon Network
 34.245.15.69:8546
+
+Fantom Network
+34.245.15.69:8548
+
+ssh -i BS-ForkedNetwork-Key.pem ubuntu@3.250.66.5
 ```
 
 ## Accounts to use

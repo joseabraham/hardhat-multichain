@@ -33,3 +33,12 @@ services:
       - ./hardhat.fantom.ts:/usr/src/app/hardhat.config.ts
     ports:
       - "8548:8545"
+  avalanche:
+    build: .
+    env_file:
+      - .env
+    container_name: avalanche
+    volumes:
+      - ./hardhat.avalanche.ts:/usr/src/app/hardhat.config.ts
+    ports:
+      - "8549:8545"
